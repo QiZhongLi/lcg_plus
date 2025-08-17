@@ -651,7 +651,7 @@ class State:
         if self.num_modes != 1:
             raise ValueError('This is a multimode state. Can only copy make copies of single mode states.')
 
-        if selv.num_k != self.num_weights:
+        if self.num_k != self.num_weights:
             raise ValueError('Doesnt handle fast rep correctly.')
             
         means, cov, log_weights = self.means, self.covs, self.log_weights
